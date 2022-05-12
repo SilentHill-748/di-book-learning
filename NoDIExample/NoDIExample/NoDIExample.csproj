@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="6.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NoDIExample.DomainLayer\NoDIExample.DomainLayer.csproj" />
+  </ItemGroup>
+
 </Project>

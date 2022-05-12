@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NoDIExample.DataLayer\NoDIExample.DataLayer.csproj" />
+  </ItemGroup>
+
 </Project>
