@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "MSSQL": "Server=localhost;Database=CommerceShop;Trusted_Connection=True;"
+  }
+}

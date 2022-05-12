@@ -14,7 +14,7 @@ namespace NoDIExample.DataLayer
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile("settings.json")
                 .Build();
 
             string connectionString = configuration.GetConnectionString("MSSQL");
