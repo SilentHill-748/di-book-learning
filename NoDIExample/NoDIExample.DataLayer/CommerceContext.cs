@@ -12,9 +12,11 @@ namespace NoDIExample.DataLayer
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            string res = Directory.GetCurrentDirectory();
+
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("settings.json")
+                .AddJsonFile("appsettings.json")
                 .Build();
 
             string connectionString = configuration.GetConnectionString("MSSQL");
