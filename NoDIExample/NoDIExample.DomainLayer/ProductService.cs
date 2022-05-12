@@ -19,7 +19,6 @@ namespace NoDIExample.DomainLayer
             decimal discount = isCustomerPreferred ? 0.95m : 1;
 
             var products = _commerceContext.Products
-                .AsEnumerable()
                 .Where(x => x.IsFeatured);
 
             return products.Select(x => new Products()

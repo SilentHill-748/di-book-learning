@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+using NoDIExample.DomainLayer;
 using NoDIExample.Models;
 
 using System.Diagnostics;
@@ -17,6 +18,14 @@ namespace NoDIExample.Controllers
 
         public IActionResult Index()
         {
+            bool isCustomerPreferred = this.User.IsInRole("PreferredCustomer");
+
+            var service = new ProductService();
+
+            var products = service.GetFeaturedProducts(isCustomerPreferred);
+
+            this.ViewData["Products"] = products;
+
             return View();
         }
 
