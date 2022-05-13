@@ -1,4 +1,4 @@
-﻿using DIExample.Domain.Entities;
+﻿using DIExample.Domain.POCOs;
 using DIExample.Domain.Services.Interfaces;
 
 namespace DIExample.Domain.Services

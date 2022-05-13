@@ -1,4 +1,4 @@
-﻿namespace DIExample.Domain.Entities
+﻿namespace DIExample.Domain.POCOs
 {
     public class DiscountedProduct
     {
