@@ -23,5 +23,10 @@ namespace NoDIExample.DataLayer
 
             optionsBuilder.UseSqlServer(connectionString);
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CommerceContext).Assembly);
+        }
     }
 }
