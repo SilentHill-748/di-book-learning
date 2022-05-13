@@ -9,7 +9,7 @@ namespace DIExample.Domain.Entities
         public bool IsFeatured { get; set; }
 
 
-        public DiscountedProduct GetFeaturedProduct(IUserContext userContext)
+        public DiscountedProduct ApplyDiscountFor(IUserContext userContext)
         {
             bool isPrefferedCustomer = userContext.IsInRole(Role.PreferredCustomer);
 
