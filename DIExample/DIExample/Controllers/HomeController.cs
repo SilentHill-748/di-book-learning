@@ -1,4 +1,5 @@
 ﻿using DIExample.Models;
+using DIExample.Domain.Services.Interfaces;
 
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,19 +10,23 @@ namespace DIExample.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IProductService _productService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IProductService productService)
         {
+            ArgumentNullException.ThrowIfNull(productService, nameof(productService));
+
             _logger = logger;
+            _productService = productService;
         }
 
         public IActionResult Index()
         {
-            FeaturedProductsViewModel featuredProducts = new(new ProductViewModel[]
-            {
-                new ProductViewModel("Product 1", 200.5m),
-                new ProductViewModel("Product 2", 2500m)
-            });
+            var products = _productService
+                .GetFeaturedProducts()
+                .Select(x => new ProductViewModel(x));
+
+            var featuredProducts = new FeaturedProductsViewModel(products);
 
             return View(featuredProducts);
         }
