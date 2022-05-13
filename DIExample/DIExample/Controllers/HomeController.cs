@@ -17,7 +17,13 @@ namespace DIExample.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            FeaturedProductsViewModel featuredProducts = new(new ProductViewModel[]
+            {
+                new ProductViewModel("Product 1", 200.5m),
+                new ProductViewModel("Product 2", 2500m)
+            });
+
+            return View(featuredProducts);
         }
 
         public IActionResult Privacy()
