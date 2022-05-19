@@ -1,4 +1,5 @@
 ﻿using DIExample.Domain;
+using DIExample.Domain.Abstractions;
 
 namespace DIExample
 {

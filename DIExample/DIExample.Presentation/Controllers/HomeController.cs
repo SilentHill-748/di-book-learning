@@ -1,9 +1,9 @@
-﻿using DIExample.Models;
-using DIExample.Domain.Services.Interfaces;
+﻿using System.Diagnostics;
 
 using Microsoft.AspNetCore.Mvc;
 
-using System.Diagnostics;
+using DIExample.Models;
+using DIExample.Domain.Abstractions;
 
 namespace DIExample.Controllers
 {

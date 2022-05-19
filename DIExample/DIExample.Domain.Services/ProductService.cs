@@ -1,6 +1,5 @@
-﻿using DIExample.Domain.POCOs;
-using DIExample.Domain.Repositories;
-using DIExample.Domain.Services.Interfaces;
+﻿using DIExample.Domain.Abstractions;
+using DIExample.Domain.POCOs;
 
 namespace DIExample.Domain.Services
 {

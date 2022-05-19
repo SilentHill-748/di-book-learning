@@ -1,6 +1,6 @@
 ﻿using DIExample.Domain.POCOs;
 
-namespace DIExample.Domain.Services.Interfaces
+namespace DIExample.Domain.Abstractions
 {
     public interface IProductService
     {

@@ -1,4 +1,4 @@
-﻿namespace DIExample.Domain
+﻿namespace DIExample.Domain.Abstractions
 {
     public interface IUserContext
     {

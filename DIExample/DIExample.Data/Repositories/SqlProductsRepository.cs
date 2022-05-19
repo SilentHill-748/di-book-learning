@@ -2,8 +2,8 @@
 // В книге 'Внедрение зависимостей на платформе .NET' авторы упоминули, что абстракцию IProductService надо
 // реализовать в отдельной сборке. Я предполагаю, что все абстракции домена надо вынести в отдельную сборку
 // Domain.Abstractions.
-using DIExample.Domain.Repositories;
 using DIExample.Domain.Entities;
+using DIExample.Domain.Abstractions;
 
 namespace DIExample.Data.Repositories
 {

@@ -1,6 +1,6 @@
 ﻿using DIExample.Domain.Entities;
 
-namespace DIExample.Domain.Repositories
+namespace DIExample.Domain.Abstractions
 {
     public interface IProductRepository
     {

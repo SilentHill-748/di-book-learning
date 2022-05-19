@@ -1,4 +1,5 @@
-﻿using DIExample.Domain.POCOs;
+﻿using DIExample.Domain.Abstractions;
+using DIExample.Domain.POCOs;
 
 namespace DIExample.Domain.Entities
 {
