@@ -9,14 +9,12 @@ namespace DIExample.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private readonly IProductService _productService;
 
-        public HomeController(ILogger<HomeController> logger, IProductService productService)
+        public HomeController(IProductService productService)
         {
             ArgumentNullException.ThrowIfNull(productService, nameof(productService));
 
-            _logger = logger;
             _productService = productService;
         }
 
