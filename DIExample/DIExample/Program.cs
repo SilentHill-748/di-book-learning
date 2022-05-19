@@ -1,6 +1,11 @@
 using Microsoft.AspNetCore.Authentication.Negotiate;
+using Microsoft.AspNetCore.Mvc.Controllers;
+
+using DIExample.CompositionRoot;
 
 var builder = WebApplication.CreateBuilder(args);
+
+string connectionString = builder.Configuration.GetConnectionString("CommerceConnection");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -13,7 +18,13 @@ builder.Services.AddAuthorization(options =>
     // By default, all incoming requests will be authorized according to the default policy.
     options.FallbackPolicy = options.DefaultPolicy;
 });
+
 builder.Services.AddRazorPages();
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddSingleton<IControllerActivator>(
+    new CommerceControllerActivator(connectionString));
 
 var app = builder.Build();
 

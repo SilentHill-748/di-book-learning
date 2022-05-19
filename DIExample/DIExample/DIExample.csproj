@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DIExample.Data\DIExample.Data.csproj" />
     <ProjectReference Include="..\DIExample.Domain\DIExample.Domain.csproj" />
+    <ProjectReference Include="..\DIExample.Presentation\DIExample.Presentation.csproj" />
   </ItemGroup>
 
 </Project>
